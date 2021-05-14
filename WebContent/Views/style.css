@@ -665,7 +665,7 @@ a {
     color: #888 !important;
 }
 
-.form-w3ls-left-info input[type="email"] {
+.form-w3ls-left-info input[type="text"] {
     outline: none;
     font-size: 14px;
     color: #888;
@@ -916,7 +916,7 @@ ul.w3layouts-icons li a.vk:hover {
 
 @media(max-width:441px) {
 
-    .form-w3ls-left-info input[type="email"],
+    .form-w3ls-left-info input[type="text"],
     .form-w3ls-left-info input[type="password"] {
         width: 91%;
     }

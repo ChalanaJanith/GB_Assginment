@@ -8,9 +8,11 @@
 
 <title> Login Form </title>
 
-<script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/main.js"></script>
+<script src="component/jquery-3.6.0.js"></script>
+<script src="component/main.js"></script>
+<script src="component/loginvalidate.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         addEventListener("load", function() {
@@ -73,7 +75,7 @@
                     </div>
                     <div class="buttons mt-lg-0 mt-3 ml-auto">
                         <div class="form-w3layouts-grid">
-                            <form action="#" method="post" class="newsletter">
+                            <form action="" method="post" class="newsletter">
                                 <input class="search" type="search" placeholder=""  required="">
                                 <button class="form-control btn" value=""><span class="fa fa-search"></span></button>
                                 
@@ -93,26 +95,29 @@
                     <div class="content-w3layouts-main">
 
                         <div class="form-w3ls-left-info">
-                            <form action="#" method="post" name="frm-login" id="frm-login">
+                            <form action="Login" class="form"  method="post" name="formlogin" id="frm-login">
 
 
-                                <input type="email" placeholder="Email Address" id="username" name"username" required="" />
+                                <input type="text" class="form-control" placeholder="Email Address" id="username" autocomplete="off" name="uname"  />
+								<span id="emailmsg"></span>
 
 
-
-                                <input type="password" placeholder="Password" id="password" name"password" required="" />
+                                <input type="password" placeholder="Password" autocomplete="off" id="password" name="pass"  />
+                                <span id="passmsg"></span>
                                 
  								<div class="links">
-                                    <p><a href="#">Create Account?</a></p>
+                                    <p><a href="signup.jsp">Create Account?</a></p>
 
                                 </div>
                               
+                              
                                 <div class="bottom">
-                                    <button class="btn" type="submit" onclick="login()">Log In</button>
-                                    <button class="btn reg" type="reset" onclick="reset()">Clear</button>
+                                    <button id="btnLogin" class="btn" type="submit" >Log In</button>
+                                    <button  class="btn reg" type="reset" >Clear</button>
+                                    
                                 </div>
                                 
-                                <div id="err" style="color:red"></div>
+                               
 
                             </form>
                         </div>
